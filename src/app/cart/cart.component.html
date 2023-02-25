@@ -1,0 +1,39 @@
+<div class="container-flex cart">
+    <div class="container cart">
+        <div *ngFor="let dish of items">
+            <div class="row row-cols-lg-4">
+               <div class="col"> <img src="{{dish.image}}" style="width: 10rem; height: 10rem;"></div>
+               <div class="col">
+                 <h3>{{dish.name}}</h3>
+                 <p>{{dish.shortText}}</p>
+                </div>
+                <div class="col">
+                    <p class="text"><b>{{dish.price | currency}} € </b></p>
+                </div>
+            </div> 
+            <hr>
+        </div>
+    </div>
+    <h3 class="numberOfItems">Item(s) in Cart: {{items.length}}</h3>
+    <div class="summing">
+        <p class="btn btn-warning" style="width:150px; margin-top: 10px;" (click)="getTotal()">Check the Sum</p>
+        <h4>Products: {{totalAmountWithoutService | currency}}</h4>
+        <h4>Service: {{serviceAmount | currency}}</h4>
+        <h4>Discount: {{discount | currency}}</h4>
+        <h4>Total amount {{totalAmountWithService | currency}}</h4>
+    </div>
+</div>
+
+<div class="cart">
+    <h1 id="orderForm">Order Form</h1>
+    <h3>Please fill up the info for the delivery</h3>
+    <hr>
+    <h3>Name</h3>
+    <input type="text" id="input">
+    <h3>Adress</h3>
+    <input type="text" id="input"> <br>
+    <p class="btn btn-primary" style="width:150px; margin: 20px;">Purchase</p>
+
+</div>
+
+

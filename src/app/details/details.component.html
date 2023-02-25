@@ -1,0 +1,15 @@
+
+<div class="container my-5">
+    <h1 class="text-center">Check our specials</h1>
+    <div class="d-flex">
+        <div class="flex-shrink-0">
+            <img src="{{dish.image}}">
+        </div>
+        <div class="flex-grow-1 ms-3 box p-4 m-0">
+           <p id="textArea"> {{dish.name}}</p>
+        <p id="textDescription"> {{dish.description}}</p>
+        <button class="btn btn-warning button" (click)="addToCart()">Add to cart</button>
+        </div>
+    </div>
+
+</div>

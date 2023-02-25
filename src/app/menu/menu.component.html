@@ -1,0 +1,27 @@
+        <div class="menu">
+            <div class="mt-2">
+                <h1 class="text-center">Our specialties</h1>
+            </div>
+            
+            <div class="container aligns-items-center justify-content-center row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 p-3">
+                <div *ngFor="let items of menu; index as itemId">
+                    <div class="card text-center mx-auto" style="width: 20rem; height: 30rem;">
+                        <img class="card-img-top" src="{{items.image}}">
+                        <div class="card-body">
+                        <h5 class="card-title">{{items.name}}</h5>
+                        <hr>
+                        <h6 class="card-text">{{items.shortText}}</h6>
+                        <hr>
+                        <h6 class="card-text">Price: {{items.price | currency}}</h6>
+                        <hr>
+                        <div>
+                            <button class="buttons bg-primary">
+                                <a class="text-white" style="text-decoration: none;" routerLink="/menuItems/{{itemId}}">More Details</a>
+                            </button>
+                            <p class="buttons bg-success text-white" style="text-decoration: none;"
+                            (click)="addToCart(items)">Add to Cart</p>
+                    </div>
+                </div>
+            
+            </div>
+        </div>

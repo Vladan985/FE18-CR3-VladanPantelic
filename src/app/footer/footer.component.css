@@ -1,0 +1,11 @@
+#designer {
+    background-color: black;
+    text-align: center;
+    padding: 25px;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    height: 60px;
+    width: 100%;
+    font-family: "Great Vibes", cursive;
+  }
